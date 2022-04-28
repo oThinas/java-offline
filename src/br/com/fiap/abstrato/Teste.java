@@ -1,10 +1,12 @@
 package br.com.fiap.abstrato;
 
+import java.text.DecimalFormat;
 import java.util.Scanner;
 
 public class Teste {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
+        DecimalFormat df = new DecimalFormat("0.00");
         int op = 0;
         double perimetro = 0;
         double area = 0;
@@ -33,8 +35,8 @@ public class Teste {
                     break;
             }
         } while (op != 1 && op != 2);
-        System.out.println("Perímetro = " + perimetro +
-                            "\nÁrea = " + area);
+        System.out.println("Perímetro = " + df.format(perimetro) +
+                            "\nÁrea = " + df.format(area));
         sc.close();
     }
 }
