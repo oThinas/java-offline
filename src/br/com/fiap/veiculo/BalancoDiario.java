@@ -1,13 +1,12 @@
 package br.com.fiap.veiculo;
 
 public class BalancoDiario {
-    Veiculo veiculo = new Veiculo();
     private static int qtdeCarros;
     private static double total;
 
     public void doAdd(Veiculo obj) {
         qtdeCarros += 1;
-        total += veiculo.doTotal();
+        total += obj.doTotal();
     }
 
     public String doGerarRelatiorio() {
